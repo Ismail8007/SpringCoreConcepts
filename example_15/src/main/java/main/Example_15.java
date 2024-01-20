@@ -11,11 +11,15 @@ public class Example_15 {
 
 		var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 		
-		System.out.println("Before retrieving the person bean from spring context");
+		String[] names=context.getBeanDefinitionNames();
+		
+		
+		System.out.println("Before retrieving the person bean from spring context" + names.length);
 		
 		var p = context.getBean(Person.class);
+		String[] names1=context.getBeanDefinitionNames();
 		
-		System.out.println("After retrieving the person bean from spring context");
+		System.out.println("After retrieving the person bean from spring context" + names1.length);
 		
 	}
 

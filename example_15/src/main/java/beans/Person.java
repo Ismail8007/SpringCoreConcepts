@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 /*@Lazy can be used at component level and config level
 */
-@Lazy
+@Lazy(true)
 @Component(value="personBean")
 public class Person {
 	
